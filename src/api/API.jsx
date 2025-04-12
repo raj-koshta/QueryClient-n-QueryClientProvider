@@ -4,7 +4,17 @@ const api = axios.create({
     baseURL: "https://jsonplaceholder.typicode.com"
 })
 
-// To fetching the data
-export const fetchPosts = ()=>{
+// To fetching the data // old way
+export const fetchPosts = () => {
     return api.get("/posts")
+}
+
+// RQ way
+export const fetchPostsRQ = async () => {
+    try {
+        const res = await api.get("/posts")
+        return res.status === 200 ? res.data : []
+    } catch (error) {
+        console.log(error.message)
+    }
 }
