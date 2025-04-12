@@ -12,15 +12,15 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
+        path: "/queryclient-n-provider/",
         element: <Home />
       },
       {
-        path: "/trad",
+        path: "/queryclient-n-provider/trad",
         element: <FetchOld />
       },
       {
-        path: "/rq",
+        path: "/queryclient-n-provider/rq",
         element: <FetchRQ />
       },
     ]

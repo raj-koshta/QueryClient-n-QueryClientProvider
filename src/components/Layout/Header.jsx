@@ -7,9 +7,9 @@ const Header = () => {
       <div>
         <NavLink to="/"> TanStack Query </NavLink>
         <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/trad">FetchOld</NavLink></li>
-          <li><NavLink to="/rq">FetchRQ</NavLink></li>
+          <li><NavLink to="/queryclient-n-provider/">Home</NavLink></li>
+          <li><NavLink to="/queryclient-n-provider/trad">FetchOld</NavLink></li>
+          <li><NavLink to="/queryclient-n-provider/rq">FetchRQ</NavLink></li>
         </ul>
       </div>
     </header>

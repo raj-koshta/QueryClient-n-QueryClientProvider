@@ -1,5 +1,6 @@
 {
   "name": "queryclient-n-provider",
+  "homepage": "https://raj-koshta.github.io/queryclient-n-provider",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "bun run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.71.5",
