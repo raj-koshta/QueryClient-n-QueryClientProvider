@@ -3,19 +3,19 @@ import { useQuery } from '@tanstack/react-query';
 
 const FetchRQ = () => {
 
-  const { data } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ['post'], // work like useState
     queryFn: fetchPostsRQ, // work like useEffect
   }
   )
 
-  // if (loading) {
-  //   return (<div className="loader"></div>)
-  // }
-
-  // if (error) {
-  //   return <div><h1>{error.message}</h1></div>
-  // }
+  if (isLoading) {
+    return (<div className="loader"></div>)
+  }
+  
+  if (isError) {
+    return <div><h1>Error: {error.message || "Something goes wrong"}</h1></div>
+  }
 
   return (
     <div>
