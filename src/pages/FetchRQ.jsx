@@ -6,6 +6,8 @@ const FetchRQ = () => {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['post'], // work like useState
     queryFn: fetchPostsRQ, // work like useEffect
+    gcTime: 5000, // Pass in Milli-Second
+    staleTime: 5000, // Pass in Milli-Second
   }
   )
 
