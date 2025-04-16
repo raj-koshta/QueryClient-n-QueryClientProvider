@@ -7,7 +7,9 @@ const FetchRQ = () => {
     queryKey: ['post'], // work like useState
     queryFn: fetchPostsRQ, // work like useEffect
     gcTime: 5000, // Pass in Milli-Second
-    staleTime: 5000, // Pass in Milli-Second
+    // staleTime: 5000, // Pass in Milli-Second
+    refetchInterval: 1000,
+    // refetchIntervalInBackground: true,
   }
   )
 
