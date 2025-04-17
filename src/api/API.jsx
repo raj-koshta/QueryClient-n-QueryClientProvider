@@ -18,3 +18,12 @@ export const fetchPostsRQ = async () => {
         console.log(error.message)
     }
 }
+
+export const fetchPostDeatil = async (id)=>{
+    try {
+        const res = await api.get(`/posts/${id}`)
+        return res.status === 200 ? res.data : [];
+    } catch (error) {
+        console.log(error.message);
+    }
+}

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { fetchPostsRQ } from '../api/API';
 import { useQuery } from '@tanstack/react-query';
 
@@ -16,7 +17,7 @@ const FetchRQ = () => {
   if (isLoading) {
     return (<div className="loader"></div>)
   }
-  
+
   if (isError) {
     return <div><h1>Error: {error.message || "Something goes wrong"}</h1></div>
   }
@@ -29,11 +30,15 @@ const FetchRQ = () => {
             const { id, title, body } = cusElem;
             return (
               <li key={id}>
-                <p>{title}</p>
-                <p>{body}</p>
+                <NavLink to={`/queryclient-n-provider/rq/${id}`}>
+                  <p>{id}</p>
+                  <p>{title}</p>
+                  <p>{body}</p>
+                </NavLink>
               </li>
             )
-          })
+          }
+        )
         }
       </ul>
     </div>
